@@ -30,10 +30,14 @@ export function IdentityCard() {
 
         setLoading(true)
 
-        const url = `https://consulta.edgarsingui.ao/consultar/`
-        const { data } = await api.get(`${url}/${input}`)
+        const url = `https://consulta.edgarsingui.ao/consultar`
+        const { data } = await api.get(`${url}/${input}`).finally(()=> {
+            setLoading(false)
+        })
+
         // const info = await getData()
-        setLoading(false)
+        // setLoading(false)
+        
         setData(data)
 
     }
