@@ -1,0 +1,23 @@
+.spinner {
+    color: green;
+    border: .4rem solid transparent;
+    animation: spin 1s normal infinite;
+    transition: .4s;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    appearance: none;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-top-color: #333;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
