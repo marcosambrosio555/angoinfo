@@ -39,7 +39,7 @@ export function Home() {
                                     <span className='font-semibold group-hover:text-blue-500'>
                                         {item.title}
                                     </span>
-                                    <span className='text-xs text-center  min-h-12'>
+                                    <span className='text-xs text-center  min-h-12 line-clamp-3'>
                                         {item.description}
                                     </span>
                                 </Link>

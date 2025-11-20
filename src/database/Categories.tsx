@@ -70,41 +70,41 @@ export const categories: CategoriesProps[] = [
         title: "Classificações",
         icon: <BarChart2 />,
         url: "/rankings",
-        description: "Veja a posição de Angola em rankings económicos, sociais e internacionais."
+        description: "Veja a posição de Angola em rankings económicos e sociais"
     },
     {
         id: "curiosities",
         title: "Curiosidades",
         icon: <Brain />,
         url: "/curiosities",
-        description: "Fatos interessantes e curiosos sobre cultura, história e vida cotidiana angolana."
+        description: "Fatos interessantes e curiosos sobre cultura, história e vida cotidiana"
     },
     {
         id: "news",
         title: "Noticías",
         icon: <Newspaper />,
         url: "/news",
-        description: "Acompanhe as principais notícias e atualizações relevantes sobre Angola hoje."
+        description: "Acompanhe as principais notícias e atualizações relevantes sobre Angola"
     },
     {
         id: "converter",
         title: "Conversor",
         icon: <CircleDollarSign />,
         url: "/converter",
-        description: "Ferramenta simples para converter valores entre Kz e outras moedas internacionais."
+        description: "Converta valores entre Kz e outras moedas internacionais"
     },
     {
         id: "quiz",
         title: "Questionário",
         icon: <Gamepad />,
         url: "/quiz",
-        description: "Quiz interativo para aprender e avaliar conhecimentos sobre o país."
+        description: "Quiz interativo para aprender e avaliar conhecimentos sobre Angola"
     },
     {
         id: "about",
         title: "Sobre",
         icon: <AlertTriangle />,
         url: "/about",
-        description: "Informações sobre objetivo e referencias bibliográficas da aplicação dedicada a Angola."
+        description: "Informações sobre objetivo e referencias bibliográficas da aplicação"
     },
 ]
