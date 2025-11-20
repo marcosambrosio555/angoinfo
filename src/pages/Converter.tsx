@@ -45,10 +45,11 @@ export function Conveter() {
 
     function format(value: number) {
         console.log(value)
-        // return value.toLocaleString("ed-ED", {
-        //     minimumFractionDigits: 2
-        // })
-        return new Intl.NumberFormat("pt-AO").format(value)
+        return value.toLocaleString("pt-AO", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })
+        // return new Intl.NumberFormat("pt-AO").format(value)
     }
 
     useEffect(() => {
@@ -83,9 +84,9 @@ export function Conveter() {
                                         value={amountFrom}
                                         onInput={(e) => {
                                             setAmountFrom(e.target.value)
-                                            format(amountFrom)
-                                            console.log(amountFrom)
-                                            // convert()
+                                            // format(amountFrom)
+                                            // console.log(amountFrom)
+                                            convert()
                                         }}
                                     />
                                     <select
@@ -93,7 +94,7 @@ export function Conveter() {
                                         id="from"
                                         className="p-1 min-w-24 outline-none bg-transparent font-semibold"
                                         onInput={() => {
-                                            // convert()
+                                            convert()
                                         }}
                                     >
                                         {
@@ -124,14 +125,18 @@ export function Conveter() {
                                         readOnly={true}
                                         value={amountTo}
                                         className="w-full outline-none bg-transparent pl-2 py-2 text-xl font-semibold" placeholder="0.00" />
-                                    <select name="to" id="to" className="p-1 min-w-24 outline-none bg-transparent font-semibold">
+                                    <select
+                                        name="to"
+                                        id="to"
+                                        defaultValue={"USD"}
+                                        onInput={() => convert()}
+                                        className="p-1 min-w-24 outline-none bg-transparent font-semibold">
                                         {
                                             countries.map((item => (
                                                 <option
                                                     value={item.currency}
                                                     key={item.currency}
                                                     className="font-semibold"
-                                                    defaultValue={"USD"}
                                                 >
                                                     {item.icon}
                                                     {item.currency}
@@ -140,6 +145,8 @@ export function Conveter() {
                                         }
                                     </select>
                                 </div>
+                                <p>{amountTo}</p>
+                                <p>{format(amountTo)}</p>
                             </div>
 
                         </div>
