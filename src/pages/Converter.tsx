@@ -8,11 +8,11 @@ import { api } from "../api"
 
 export function Conveter() {
 
-    const [amountFrom, setAmountFrom] = useState(100)
+    const [amountFrom, setAmountFrom] = useState(1)
     const [amountTo, setAmountTo] = useState(0)
 
-    const [currencyFrom, setCurrencyFrom] = useState("AOA")
-    const [currencyTo, setCurrencyTo] = useState("USD")
+    const [currencyFrom, setCurrencyFrom] = useState("USD")
+    const [currencyTo, setCurrencyTo] = useState("AOA")
 
 
     // async function convert() {
@@ -30,32 +30,30 @@ export function Conveter() {
         const url = "https://open.er-api.com/v6/latest"
         const { data } = await api.get(`${url}/${currencyFrom}`)
 
-        console.log(data)
         const count = data.rates[currencyTo]
 
-        console.log(count)
-
-        console.log(typeof count)
-
-        console.log(count * amountFrom)
+        console.log("------------------------------")
+        console.log(`Multiplo ${count}`)
+        console.log(`Moeda DE ${currencyFrom}`)
+        console.log(`Moeda PARA ${currencyTo}`)
+        console.log(`Valor DE ${amountFrom}`)
+        console.log(`Valor PARA ${count * amountFrom}`)
 
         setAmountTo(count * amountFrom)
 
     }
 
+    useEffect(() => {
+        convert()
+    }, [currencyFrom, currencyTo, amountFrom])
+
     function format(value: number) {
-        console.log(value)
         return value.toLocaleString("pt-AO", {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         })
         // return new Intl.NumberFormat("pt-AO").format(value)
     }
-
-    useEffect(() => {
-        convert()
-    }, [])
-
 
     return (
         <div className='min-h-screen flex flex-col'>
@@ -82,19 +80,17 @@ export function Conveter() {
                                         className="w-full outline-none bg-transparent pl-2 py-2 text-lg"
                                         placeholder="0.00"
                                         value={amountFrom}
-                                        onInput={(e) => {
-                                            setAmountFrom(e.target.value)
-                                            // format(amountFrom)
-                                            // console.log(amountFrom)
-                                            convert()
+                                        onChange={(e) => {
+                                            setAmountFrom(Number(e.target.value))
                                         }}
                                     />
                                     <select
                                         name="from"
                                         id="from"
+                                        defaultValue={currencyFrom}
                                         className="p-1 min-w-24 outline-none bg-transparent font-semibold"
-                                        onInput={() => {
-                                            convert()
+                                        onChange={(e) => {
+                                            setCurrencyFrom(e.target.value)
                                         }}
                                     >
                                         {
@@ -123,13 +119,15 @@ export function Conveter() {
                                     <input
                                         type="text"
                                         readOnly={true}
-                                        value={amountTo}
+                                        value={`${format(amountTo)} ${currencyTo}`}
                                         className="w-full outline-none bg-transparent pl-2 py-2 text-xl font-semibold" placeholder="0.00" />
                                     <select
                                         name="to"
                                         id="to"
-                                        defaultValue={"USD"}
-                                        onInput={() => convert()}
+                                        defaultValue={currencyTo}
+                                        onChange={(e) => {
+                                            setCurrencyTo(e.target.value)
+                                        }}
                                         className="p-1 min-w-24 outline-none bg-transparent font-semibold">
                                         {
                                             countries.map((item => (
@@ -145,8 +143,6 @@ export function Conveter() {
                                         }
                                     </select>
                                 </div>
-                                <p>{amountTo}</p>
-                                <p>{format(amountTo)}</p>
                             </div>
 
                         </div>
