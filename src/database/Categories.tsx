@@ -11,6 +11,7 @@ import {
     BookOpen,
     AlertTriangle,
     CircleDollarSign,
+    UsersIcon,
 } from 'lucide-react'
 
 
@@ -38,11 +39,11 @@ export const categories: CategoriesProps[] = [
         description: "Informações essenciais sobre população, território, economia e indicadores gerais de Angola."
     },
     {
-        id: "articles",
-        title: "Artigos",
-        icon: <Book />,
-        url: "/articles",
-        description: "Conteúdos variados destacando temas atuais e relevantes sobre Angola contemporânea."
+        id: "persons",
+        title: "Pessoas",
+        icon: <UsersIcon />,
+        url: "/persons",
+        description: "Lista de pessoas angolanas famosas, de diferentes áreas (política, arte, música, literária, etc)"
     },
     {
         id: "weather",

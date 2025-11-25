@@ -1,8 +1,8 @@
 
-export function Articles() {
+export function Persons() {
     return (
         <section>
-            Articles
+            Persons
         </section>
     )
 }

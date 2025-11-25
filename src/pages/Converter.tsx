@@ -2,7 +2,7 @@ import { RefreshCcw, Repeat } from "lucide-react"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 import { Navbar } from "../components/Navbar"
-import { countries } from "../database/converter"
+import { currencies } from "../database/converter"
 import { useEffect, useState } from "react"
 import { api } from "../api"
 
@@ -10,20 +10,9 @@ export function Conveter() {
 
     const [amountFrom, setAmountFrom] = useState(1)
     const [amountTo, setAmountTo] = useState(0)
-
     const [currencyFrom, setCurrencyFrom] = useState("USD")
     const [currencyTo, setCurrencyTo] = useState("AOA")
 
-
-    // async function convert() {
-
-    //     const url = "https://api.exchangerate.host/"
-    //     const { data } = await api.get(`${url}convert?from=${currencyFrom}&to=${currencyTo}&amount=${amountFrom}`)
-
-    //     console.log(data)
-
-    //     setAmountTo(data.result)
-    // }
 
     async function convert() {
 
@@ -31,13 +20,6 @@ export function Conveter() {
         const { data } = await api.get(`${url}/${currencyFrom}`)
 
         const count = data.rates[currencyTo]
-
-        console.log("------------------------------")
-        console.log(`Multiplo ${count}`)
-        console.log(`Moeda DE ${currencyFrom}`)
-        console.log(`Moeda PARA ${currencyTo}`)
-        console.log(`Valor DE ${amountFrom}`)
-        console.log(`Valor PARA ${count * amountFrom}`)
 
         setAmountTo(count * amountFrom)
 
@@ -52,7 +34,6 @@ export function Conveter() {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
         })
-        // return new Intl.NumberFormat("pt-AO").format(value)
     }
 
     return (
@@ -94,7 +75,7 @@ export function Conveter() {
                                         }}
                                     >
                                         {
-                                            countries.map((item => (
+                                            currencies.map((item => (
                                                 <option
                                                     value={item.currency}
                                                     key={item.currency}
@@ -130,7 +111,7 @@ export function Conveter() {
                                         }}
                                         className="p-1 min-w-24 outline-none bg-transparent font-semibold">
                                         {
-                                            countries.map((item => (
+                                            currencies.map((item => (
                                                 <option
                                                     value={item.currency}
                                                     key={item.currency}
