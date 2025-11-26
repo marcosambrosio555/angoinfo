@@ -20,7 +20,7 @@ export function History() {
                     </h2>
 
                     <figure className="px-4 bg-stone-200">
-                        <img className="max-w-sm block m-auto" src={`/images/history-1.jpg`} alt="João Lourenço com Lionel Messi" />
+                        <img className="sm:max-w-sm max-w-xs block m-auto" src={`/images/history-1.jpg`} alt="João Lourenço com Lionel Messi" />
                     </figure>
 
                     <div className="mt-4">
