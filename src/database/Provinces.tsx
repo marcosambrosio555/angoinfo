@@ -4,13 +4,17 @@ export interface ProvinceProps {
     name: "Cabinda" | "Zaire" | "Uíge" | "Bengo" | "Cuando" |
     "Luanda" | "Icolo e Bengo" | "Cuanza Norte" | "Cuanza Sul" | "Malanje" |
     "Lunda Norte" | "Lunda Sul" | "Moxico" | "Moxico Leste" | "Bié" |
-    "Huambo" | "Benguela" | "Namibe" | "Huíla" | "Cunene" | "Cubango"
+    "Huambo" | "Benguela" | "Namibe" | "Huíla" | "Cunene" | "Cubango" |
+    "Ícolo e Bengo" | "Moxico Leste" | "Cuando" | "Zaire"
     capital: string
     extension: number
     population: number
     detach?: string
     body: JSX.Element
 }
+
+
+
 
 export const provinces: ProvinceProps[] = [
     {
@@ -222,6 +226,254 @@ export const provinces: ProvinceProps[] = [
             </p>
         )
     },
+    {
+        slug: "icolo-e-bengo",
+        name: "Icolo e Bengo",
+        capital: "Catete",
+        extension: 0,
+        population: 0,
+        detach: "Região extremamente fértil, com muitos rios —  chamada de “Mesopotâmia de Angola.",
+        body: (
+            <p>
+                Ícolo e Bengo é uma província que se destaca pela abundância de rios e
+                planícies férteis, tornando-se uma das áreas de maior potencial agrícola do
+                país. A região é atravessada pelo rio Bengo, pelo rio Cuanza, pelo rio
+                Longa e diversos afluentes menores, formando uma paisagem marcada por
+                várzeas e solos aluviais que, historicamente, sustentam culturas agrícolas
+                variadas. A presença desses rios não só facilita a agricultura, mas também
+                gera oportunidades para pesca, irrigação e desenvolvimento de polos
+                agroindustriais no futuro.
+                A capital, Catete, tem um significado histórico profundo, sendo o local de
+                nascimento de Agostinho Neto, primeiro Presidente de Angola. Isso torna a
+                província um ponto de referência cultural e política no contexto nacional.
+                Apesar de ser uma província recente, a região já era administrativamente
+                reconhecida como município durante décadas, possuindo uma base urbana e
+                rural estruturada, com aldeias e comunas de importância histórica, como
+                Calumbo, Bom Jesus e Cazenga Rural.
+                A província combina áreas de mata, savana e zonas úmidas, compondo um
+                mosaico ecológico que favorece a biodiversidade. No seu território
+                encontra-se parte do Parque Nacional da Quiçama, um dos maiores e mais
+                emblemáticos parques naturais de Angola, conhecido pela presença de
+                elefantes, palancas, aves raras e vegetação variada. Além disso, Ícolo e
+                Bengo é um eixo de ligação entre Luanda e o interior do país, servindo como
+                corredor de circulação e de abastecimento.
+                Culturalmente, a província apresenta tradições preservadas, com danças,
+                gastronomia e costumes típicos das comunidades rurais ribeirinhas. A vida
+                quotidiana gira em torno do ritmo agrícola e das atividades tradicionais.
+                Mesmo sendo nova como província, já tem identidade territorial forte —
+                marcada pela agricultura, pelas águas abundantes, pela história
+                anticolonial e pelo potencial turístico ecológico. Ícolo e Bengo é vista
+                como um território emergente, com grande capacidade para se tornar um polo
+                agrícola e cultural significativo no futuro de Angola.
+
+            </p>
+        )
+    },
+    {
+        slug: "moxico-leste",
+        name: "Moxico Leste",
+        capital: "Cazombo",
+        extension: 0,
+        population: 0,
+        detach: "Província rica em rios, florestas e biodiversidade — área estratégica para agricultura e turismo ecológico.",
+        body: (
+            <p>
+                Moxico Leste é uma província criada na divisão territorial recente de
+                Angola, separando - se da antiga Moxico, que era a maior província do país.
+                Situada na região oriental, a província possui uma das maiores
+                concentrações de recursos naturais, incluindo vastas florestas, rios
+                extensos e solos férteis.Sua capital, Cazombo, já era um centro urbano
+                relevante antes da divisão, localizado próximo ao rio Zambeze — um dos
+                maiores rios do continente africano.
+                A província se destaca pelos ecossistemas florestais, importantes tanto
+                para conservação ambiental quanto para exploração sustentável de madeira.
+                Além disso, é uma das regiões de Angola com maior potencial agrícola,
+                produzindo milho, feijão, batata - doce, mandioca e outras culturas
+                essenciais.As chuvas são relativamente abundantes, e o clima tropical
+                úmido cria condições ideais para expansão de cultivos comerciais no futuro.
+                O território também abriga áreas naturais emblemáticas, como o Parque
+                Nacional da Cameia, que contém o Lago Dilolo, o maior lago de Angola.O
+                parque possui savanas alagadas, aves raras, animais migratórios e paisagens
+                únicas, oferecendo grande potencial para projetos de ecoturismo e
+                conservação.As comunidades locais preservam tradições culturais ricas, com
+                línguas e costumes do grupo Lunda - Tchokwe, conhecidos pelas esculturas em
+                madeira e máscaras cerimoniais.
+                Historicamente, a região foi uma zona de intensa atividade durante a guerra
+                civil, o que deixou marcas de destruição e atraso socioeconômico.Ainda
+                hoje, muitas áreas estão em processo de reconstrução e desminagem.No
+                entanto, com a criação da nova província, cresce a expectativa de novos
+                investimentos, melhores infraestruturas e fortalecimento administrativo.
+                Moxico Leste é vista como um território vasto, rico em água, biodiversidade
+                e cultura tradicional, com enorme potencial para agricultura, turismo e
+                gestão florestal sustentável.
+
+            </p>
+        )
+    },
+    {
+        slug: "cubango",
+        name: "Cubango",
+        capital: "Menongue",
+        extension: 0,
+        population: 0,
+        detach: "Província de grande riqueza natural — rios, savanas e florestas que formam .",
+        body: (
+            <p>
+
+                Cubango é uma província localizada no sul de Angola, caracterizada por
+                vastas planícies, savanas intermináveis, rios volumosos e florestas que
+                compõem um dos ambientes naturais mais diversificados do país.Sua capital,
+                Menongue, é uma cidade em crescimento, com importância estratégica tanto no
+                transporte quanto na organização administrativa do sul angolano.A
+                província original tinha quase 200 mil km², sendo uma das maiores do
+                território nacional.
+                O rio Cubango, que dá nome à província, é um dos rios mais importantes da
+                África Austral.Ele percorre longas distâncias e, juntamente com o rio
+                Cuito, alimenta o famoso Delta do Okavango, no Botsuana — um dos maiores
+                santuários naturais do mundo.Isso torna Cubango extremamente relevante
+                para a ecologia regional e para a estabilidade hidrológica da África
+                Austral, sendo essencial para a vida selvagem e para as populações que
+                dependem dele.
+                A província possui inúmeros recursos naturais: madeira, fauna abundante,
+                vastas áreas de pasto e zonas que podem ser utilizadas para agricultura
+                extensiva, especialmente milho, massango e feijão.No entanto, o
+                desenvolvimento agrícola ainda é limitado, devido ao distanciamento de
+                grandes centros industriais e às dificuldades de transporte.
+                Historicamente, Cubango foi palco de importantes acontecimentos militares
+                durante a guerra civil angolana, o que retardou o desenvolvimento regional.
+                Muitas áreas permanecem pouco povoadas, mas com grande potencial para
+                turismo ecológico, safaris, parques naturais e atividades de conservação.
+                Também é uma região habitada por comunidades tradicionais, com culturas
+                únicas, modos de vida baseados na caça, pesca e pecuária, além de tradições
+                orais transmitidas entre gerações.
+                A expectativa para o futuro é que Cubango se torne uma referência nacional
+                em conservação, ecoturismo e produção agrícola sustentável.Com
+                investimentos em infraestrutura e estradas, o território poderá ganhar
+                grande relevância económica e ambiental no contexto nacional e
+                internacional.
+
+            </p>
+        )
+
+    },
+
+    {
+        slug: "cuando",
+        name: "Cuando",
+        capital: "Mavinga",
+        extension: 0,
+        population: 0,
+        detach: "Província marcada por savanas amplas, rios importantes e forte potencial para ecoturismo e conservação ambiental.",
+        body: (
+            <p>
+
+                Cuando é uma das províncias mais novas de Angola, criada a partir da
+                divisão da antiga e enorme Cuando Cubango.Seu território situa - se no
+                sudeste do país, numa região marcada por vastas savanas, florestas abertas
+                e uma rica hidrografia dominada pelo rio Cuando(ou Kwando), que dá nome à
+                província.Essa característica hidrográfica faz da região uma zona
+                ecologicamente sensível e essencial para o equilíbrio ambiental do sul de
+                Angola e da África Austral.
+                A capital, Mavinga, é uma localidade histórica que desempenhou um papel
+                significativo durante a guerra civil angolana.A vila serviu como base
+                estratégica de movimentos armados e testemunhou alguns dos combates mais
+                intensos do conflito, o que deixou marcas profundas na infraestrutura e no
+                desenvolvimento local.Hoje, Mavinga está em reconstrução, com esforços
+                concentrados na criação de serviços públicos básicos, estradas transitáveis
+                e centros administrativos capazes de gerenciar a nova província.
+                O território de Cuando é composto principalmente por savanas abertas,
+                formações arbustivas e zonas de mato, que abrigam uma fauna diversificada.
+                A região é considerada um corredor ecológico importante para espécies como
+                antílopes, elefantes, aves migratórias, felinos de médio porte e diversas
+                espécies de répteis.A baixa densidade populacional tem contribuído para a
+                preservação de vastas áreas naturais praticamente intocadas, atraindo
+                interesse nacional e internacional para projetos de conservação.
+                A província também possui um grande potencial para o ecoturismo.As
+                paisagens naturais, os rios que serpenteiam pelas planícies, as formações
+                rochosas e os ambientes ideais para observação de animais criam condições
+                para futuras rotas turísticas sustentáveis.No entanto, o turismo ainda é
+                embrionário devido à falta de infraestrutura adequada, como estradas
+                pavimentadas, alojamentos, centros de visitantes e serviços especializados.
+                Do ponto de vista socioeconômico, Cuando é uma província predominantemente
+                rural.A população vive principalmente da agricultura de subsistência,
+                cultivando milho, massango, feijão, mandioca e amendoim.A pecuária também
+                tem presença forte, sobretudo na criação de gado, cabras e aves.A pesca
+                artesanal é praticada em comunidades ribeirinhas, especialmente durante as
+                épocas de cheia dos rios.
+                A região enfrenta desafios estruturais consideráveis, incluindo acesso
+                limitado à saúde, educação e comunicação.Como província recém - criada,
+                ainda está em fase de implementação administrativa, o que inclui criação de
+                órgãos governamentais, redefinição de municípios, construção de edifícios
+                públicos e organização de serviços provinciais.A expectativa é que, com o
+                tempo, investimentos públicos e privados fortaleçam a economia local e
+                melhorem a qualidade de vida das populações.
+                A província de Cuando representa um território imenso, rico em potencial
+                natural e cultural, que carrega tanto as marcas do passado como a promessa
+                de um futuro voltado para conservação ambiental, turismo sustentável e
+                desenvolvimento rural.
+
+            </p>
+        )
+
+    },
+    {
+        slug: "zaire",
+        name: "Zaire",
+        capital: "M'banza Kongo",
+        extension: 40130,
+        population: 594428,
+        detach: "Terra histórica do antigo Reino do Kongo — patrimônio mundial da UNESCO e  centro cultural milenar.",
+        body: (
+            <p>
+                Zaire é uma das províncias mais importantes de Angola tanto histórica
+                quanto culturalmente.Situada no norte do país, faz fronteira com a
+                República Democrática do Congo e possui uma longa costa voltada para o
+                Oceano Atlântico.A província é carregada de valor simbólico e ancestral,
+                sendo a sede do antigo e poderoso Reino do Kongo, que dominou a região por
+                séculos antes da chegada dos europeus.A capital, M'banza Kongo, é
+                reconhecida mundialmente como Património Cultural da Humanidade pela
+                UNESCO, devido à sua profunda relevância histórica e arqueológica.
+                M'banza Kongo foi centro político, espiritual e administrativo do Reino do
+                Kongo, um dos mais influentes reinos pré - coloniais de África.Seus
+                soberanos mantiveram relações diplomáticas com Portugal desde o século XV,
+                tornando - se uma das primeiras civilizações subsaarianas a estabelecer
+                contato contínuo com a Europa.Na cidade encontram - se locais históricos
+                como a antiga Sé Catedral de São Salvador do Congo, o Museu dos Reis do
+                Kongo, a árvore Nkanga a Kuluzu e as ruínas do Palácio Real.
+                Para além do patrimônio cultural, a província possui enorme importância
+                económica.Sua costa marítima facilita atividades de pesca e transporte
+                marítimo, enquanto suas fronteiras terrestres permitem trocas comerciais
+                com a região do Congo Central.Além disso, o subsolo de Zaire é rico em
+                petróleo e gás natural, sendo um dos principais pontos de exploração
+                offshore do país, especialmente na zona marítima entre Soyo e Nzeto.O
+                município do Soyo é particularmente estratégico para a indústria
+                petrolífera, abrigando terminais, refinarias e instalações de exportação.
+                Zaire também é uma província marcada por diversidade geográfica.As áreas
+                costeiras possuem praias, mangais e formações rochosas, enquanto o interior
+                é composto por savanas, colinas e vales férteis onde se desenvolve
+                agricultura e pecuária.O rio Zaire(ou Congo), que dá nome à província, é
+                um dos maiores rios do mundo e desempenha papel essencial na vida das
+                comunidades ribeirinhas, fornecendo água, peixe e rotas de navegação.
+                As tradições culturais são fortemente preservadas.As comunidades continuam
+                a praticar danças, celebrações espirituais e rituais herdados dos tempos do
+                Reino do Kongo.A música, as mascaradas tradicionais e os trajes
+                cerimoniais são elementos vivos da identidade local.A língua kikongo é
+                amplamente falada e constitui um dos pilares culturais da província.
+                Apesar do valor histórico e dos recursos naturais abundantes, Zaire
+                enfrenta desafios em infraestruturas, desigualdades regionais e
+                modernização administrativa.No entanto, o reconhecimento internacional de
+                M'banza Kongo como Património Mundial abriu portas para projetos de turismo
+                cultural, revitalização urbana e preservação histórica.
+                Com sua combinação de história milenar, riqueza cultural, localização
+                estratégica e recursos económicos, Zaire destaca - se como uma província
+                única dentro de Angola — um verdadeiro berço civilizacional e um dos mais
+                importantes centros históricos do continente africano.
+
+            </p>
+        )
+    }
+
+
 ]
 
 // "Bengo" : "Dande"
@@ -246,3 +498,5 @@ export const provinces: ProvinceProps[] = [
 // "Cubango" : "Menongue"
 // "Cuando" : "Mavinga"
 // "Zaire" : "Mbanza Kongo"
+
+

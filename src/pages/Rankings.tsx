@@ -25,8 +25,8 @@ export function Rankings() {
                                     <div>
                                         <h3 className="font-bold text-lg bg-sky-900 text-white pl-1 mb-2">{item.category}</h3>
                                         {
-                                            item.sub_categories.map((subCategory) => (
-                                                <div >
+                                            item.sub_categories.map((subCategory, index) => (
+                                                <div key={subCategory.title} className={`${index % 2 === 0 && "bg-zinc-200"}`}>
                                                     <div className="flex flex-col gap-1">
                                                         <span className="font-semibold">{subCategory.title}  <span className="font-bold text-xs">{subCategory.value}</span></span>
                                                         <div className="text-sm pl-2 flex flex-col">

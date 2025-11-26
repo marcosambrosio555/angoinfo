@@ -17,8 +17,6 @@ export function Provinces() {
         handleOrder(metric)
     }, [sort, metric])
 
-    // type: "population" | "extension" | "name"
-
     function handleOrder(type: "population" | "extension" | "name") {
 
         const order = provinces.sort((a, b) => {
@@ -96,14 +94,14 @@ export function Provinces() {
                                             <Link
                                                 to={`/province/${item.slug}`}
                                                 key={item.slug}
-                                                className="text-lg font-semibold text-blue-500"
+                                                className="font-semibold text-blue-500"
                                             >
                                                 {item.name}
                                             </Link>
-                                            <div className="flex gap-1 text-xs w-full">
-                                                <span className="flex items-center gap-1 min-w-36 rounded"><MapPin width={12} /> {item.capital}</span>
-                                                <span className="flex items-center gap-1 min-w-36 rounded"><Users2 width={12} /> {format(item.population)} habitantes</span>
-                                                <span className="flex items-center gap-1 min-w-20 rounded"><Map width={12} /> {format(item.extension)} km²</span>
+                                            <div className="flex gap-4 text-xs w-full">
+                                                <span className="flex items-center gap-1 rounded"><MapPin width={12} /> {item.capital}</span>
+                                                <span className="flex items-center gap-1 rounded"><Users2 width={12} /> {item.population === 0 ? (<span>Sem dados</span>) : (<span>{format(item.population)} habitantes</span>)}</span>
+                                                <span className="flex items-center gap-1 rounded"><Map width={12} /> {item.extension === 0 ? (<span>Sem dados</span>) : (<span>{format(item.extension)} km²</span>)}</span>
                                             </div>
                                         </div>
                                     ))
